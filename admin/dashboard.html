@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lost and found| Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <link rel="stylesheet" href="css/skin-blue.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+
+            <!-- Logo -->
+            <a href="dashboard.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>G</b>NP</span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Lost N</b>found</span>
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="" class="img-circle" id="imgProfile" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p id="adminname"></p>
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header text-center">ADMINSTRATIOR</li>
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="active"><a href="user.html"><i class="fa fa-user"></i> <span>User</span></a></li>
+                    <li><a href="post.html"><i class="fa fa-table"></i> <span>Post</span></a></li>
+                    <li><a href="feedback.html"><i class="fa fa-map"></i> <span>Feedback</span></a></li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-link"></i> <span>Setting</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+                        <ul class="treeview-menu">
+                            <li><a href="profile.html"><i class="fa fa-user"></i> <span>profile</span></a></li>
+                            <li><a id="logout" href="javascript:void(0);"><i class="fa fa-sign-out"></i> <span>logout</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+                <section class="content">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3 id="usercount" value="">150</h3>
+
+                                    <p>USER</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <a href="user.html" class="small-box-footer">More info of user <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <!-- <h3>53<sup style="font-size: 20px">%</sup></h3> -->
+                                    <h3 id="postcount" value=""></h3>
+
+                                    <p>POST</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-table"></i>
+                                </div>
+                                <a href="post.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-4 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-yellow">
+                                <div class="inner">
+                                    <h3 id="feedbackcount" value="">44</h3>
+
+                                    <p>FEEDBACK</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-map"></i>
+                                </div>
+                                <a href="feedback.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <!-- ./col -->
+                    </div>
+                </section>
+                <!-- /.row -->
+                <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Post</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body no-padding">
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Location</th>
+                                        <th>Description</th>
+                                    </tr>
+                                    <tbody id="postlist"></tbody>
+                                    <!-- <tr>
+                                        <td>1.</td>
+                                        <td>Update software</td>
+                                        <td>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge bg-red">55%</span></td>
+                                    </tr> -->
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box">
+                                <div class="box-header">
+                                    <h3 class="box-title">Feedback</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body no-padding">
+                                    <table class="table table-condensed">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Message</th>
+                                        </tr>
+                                        <tbody id="feedbacklist"></tbody>
+                                        <!-- <tr>
+                                            <td>1.</td>
+                                            <td>Update software</td>
+                                            <td>
+                                                <div class="progress progress-xs">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge bg-red">55%</span></td>
+                                        </tr> -->
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    <h3 class="box-title">User Table</h3>
+
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body table-responsive no-padding">
+                                    <table class="table table-hover">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Username</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tbody id="tabledata"></tbody>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row 
+            </section>
+            <!-- /.content -->
+        </div>
+        <div id="tabledata"></div>
+        <!-- /.content-wrapper -->
+
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2020 <a href="#">Lost N Found</a>.</strong> All rights reserved.
+        </footer>
+
+        <!-- jQuery 3 -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="js/adminlte.min.js"></script>
+        <script src="../js/logout.js"></script>
+        <script src="../js/adminprofile.js"></script>
+        <script type="text/javascript" src="../js/token.js"></script>
+        <script type="text/javascript" src="js/admindashboard.js"></script>
+
+
+        <!-- <script>
+            var tok;
+            $(document).ready(function() {
+                var data = { //Fetch form data
+                    token: localStorage.getItem("token"),
+                    id: localStorage.getItem("_id"),
+                    tok: localStorage.getItem("token")
+
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000/api/admin/postlist/',
+                    data: data,
+                    success: function(res) {
+                        var datas = "";
+                        let count = res.length;
+                        $('#postcount').html(count);
+                        $.each(res, function(index) {
+                            datas += "<tr>";
+                            datas += "<td>" + res[index].title + "</td>";
+                            datas += "<td>" + res[index].location + "</td>";
+                            datas += "<td>" + res[index].description + "</td>";
+
+                            datas += "</tr>";
+                        });
+                        // datas += " </table>";
+                        $("#postlist").append(datas);
+                        console.log(res);
+                    },
+
+                    error: function() {
+                        document.getElementById("table_data").innerHTML = "No data Available";
+                    }
+                });
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000/api/admin/contactlist/',
+                    data: data,
+                    success: function(res) {
+                        var datas = "";
+                        let count = res.length;
+                        $('#feedbackcount').html(count);
+                        $.each(res, function(index) {
+                            datas += "<tr>";
+                            datas += "<td>" + res[index].fname + ' ' + res[index].lname + "</td>";
+                            datas += "<td>" + res[index].email + "</td>";
+                            datas += "<td>" + res[index].message + "</td>";
+
+                            datas += "</tr>";
+                        });
+                        $("#feedbacklist").append(datas);
+                    },
+
+                    error: function() {
+                        document.getElementById("table_data").innerHTML = "No data Available";
+                    }
+                });
+
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000/api/admin/userlist/',
+                    data: data,
+                    success: function(res) {
+                        var datas = "";
+                        let count = res.length;
+                        $('#usercount').html(count);
+
+                        $.each(res, function(index) {
+                            datas += "    <tr>";
+                            datas += "     <td> " + res[index].name + "</td>";
+                            datas += "  <td>" + res[index].email + "</td>";
+                            datas += "      <td>" + res[index].username + "</td>";
+                            datas += "    <td>" + res[index].desc + "</td>";
+                            datas += "     </tr>"
+                        });
+                        datas += " </table>";
+                        $("#tabledata").append(datas);
+                        $("#tabledata").on('click', '#delete', function() {
+                            var data = {
+                                _id: $(this).val(),
+                                token: localStorage.getItem("token"),
+                                id: localStorage.getItem("_id")
+                            };
+                            $.ajax({
+                                type: "POST",
+                                url: "http://127.0.0.1:5000/api/admin/userdelete/",
+                                data: data,
+                                success: function(responseData, textStatus, jqXHR) {
+                                    console.log(responseData);
+                                    alert(responseData.message);
+                                    console.log(data);
+                                    location.href = "user.html"
+
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.log(errorThrown);
+                                    alert(errorThrown);
+                                }
+
+                            });
+                            return false;
+
+                        })
+                        console.log(res);
+                    },
+
+                    error: function() {
+                        document.getElementById("table_data").innerHTML = "No data Available";
+                    }
+                });
+
+
+            });
+        </script> -->
+</body>
+
+</html>

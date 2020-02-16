@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link href="../css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" style="color: #000;" href="userdashboard.html">Lost N Found</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color: #000;" href="addpost.html">
+                        <i class="fas fa-file-upload"></i> Add Post
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #000;" href="userdashboard.html">
+                        <i class="fab fa-instagram"></i> Post</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: #000;" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="userprofile.html">My account</a>
+                        <a class="dropdown-item" id="logout" href="javascript:void(0);">Log out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Card image-->
+
+
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="col-md-8 col-lg-9 col-sm-12 col-12 mt-5">
+                <div class="view">
+                    <img src="" id="image" href="addpost.html" class="img" alt="photo">
+                    <a href="#">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+                <!--Title-->
+                <div class="card view-card">
+
+                    <h3 class="col-ml-4 location" id="location" value=""></h3>
+                    <hr>
+                    <!--Text-->
+                    <p class="card-text text-justify" id="description"></p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 col-sm-12 col-12 mt-5">
+                <div class="card view-card">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-4 mt-sm-5 mt-md-0">
+                            <div class="author-img">
+                                <img src="" id="userprofileimage" class="img">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-8">
+                            <div class="author-details p-4">
+                                <h3 id="username" class="username text-center" value=""> </h3>
+                                <p class="text-center" id="desc">
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card view-card ratings mt-3">
+                    <div class="ratings-box">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <!--/.Card-->
+    <!--/.Card-->
+    <div class="mt-5"></div>
+    <div class="container-fluid">
+        <h2 class="page-header">Comments</h2>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <form id="commentform">
+            <div class="form-group">
+                <label for="">Write Your Comment Here</label>
+                <textarea class="form-control rounded-0" id="commentsection" placeholder="comment" rows="2"></textarea>
+
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <input type="submit" value="Post" class="btn btn-primary py-2 px-4 text-white">
+                </div>
+            </div>
+        </form>
+        <hr>
+        <div id="comment"></div>
+    </div>
+    <footer>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/" style="color: whitesmoke"> info@LostNfoundnepal.com</a>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="D5Q5YYZ256XDN" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+        </div>
+
+        <ul>
+            <a href="#" class="pl-0 pr-3" style="color: white"><i class="fab fa-facebook fa-2x"></i></i></a>
+            <a href="#" class="pl-3 pr-3" style="color: white"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="pl-3 pr-3" style="color: white"><i class="fab fa-snapchat fa-2x"></i></a>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/logout.js"></script>
+    <script type="text/javascript" src="../js/userpostcomment.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+
+
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <link href="../css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand" style="color: #000;" href="userdashboard.html">Lost N Found </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color: #000;" href="addpost.html">
+                        <i class="fas fa-file-upload"></i> Add Post
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #000;" href="userdashboard.html">
+                        <i class="fab fa-instagram"></i> Post</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: #000;" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="userprofile.html">My account</a>
+                        <a class="dropdown-item" id="logout" href="javascript:void(0);">Log out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title mb-4">
+                            <div class="d-flex justify-content-start">
+                                <div class="image-container">
+                                    <img src="" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
+                                </div>
+                                <div class="userData ml-3 mt-5">
+                                    <h2 class="d-block" id="user" style="font-size: 1.5rem; font-weight: bold">Username</a>
+                                    </h2>
+                                </div>
+                                <div class="ml-auto">
+                                    <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
+                                </div>
+
+                            </div>
+                            <div class="middle">
+                                <input type="file" onchange="readURL(this);" id="image" class="btn btn-primary" id="btnChangePicture" value="" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">Post</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content ml-1" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Full Name</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                <input type="text" id="name" name="name" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Email</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                <input type="text" id="email" name="email" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <hr />
+
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Username</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                <input type="text" id="username" name="username" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Description</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                <input type="text" id="desc" name="desc" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-3 col-5">
+                                                <button id="updateuser" class="btn btn-primary">Update</button>
+                                            </div>
+                                        </div>
+                                        <hr />
+
+
+
+                                    </div>
+                                    <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
+                                        <div class="box-body table-responsive no-padding">
+                                            <table class="table table-hover">
+                                                <tr>
+                                                    <th>SN</th>
+                                                    <th>Title</th>
+                                                    <th>Location</th>
+                                                    <th>Username</th>
+                                                    <th>Description</th>
+                                                    <th>Image</th>
+                                                    <th>Edit</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                                <tbody id="tabledata"></tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/" style="color: whitesmoke"> info@LostNfoundnepal.com</a>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="D5Q5YYZ256XDN" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+        </div>
+        <ul>
+            <a href="#" class="pl-0 pr-3" style="color: white"><i class="fab fa-facebook fa-2x"></i></i></a>
+            <a href="#" class="pl-3 pr-3" style="color: white"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="pl-3 pr-3" style="color: white"><i class="fab fa-snapchat fa-2x"></i></a>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/token.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <script type="text/javascript" src="../js/logout.js"></script>
+    <script type="text/javascript" src="../js/userprofile.js"></script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#imgProfile')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
